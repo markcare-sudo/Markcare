@@ -1,461 +1,3 @@
-// import React, { useState } from "react";
-// import { motion } from "framer-motion";
-// import {
-//   Menu,
-//   X,
-//   Phone,
-//   MapPin,
-//   ShieldCheck,
-//   Wrench,
-//   Droplets,
-//   Cog,
-//   Sun,
-//   Factory,
-//   Recycle,
-//   Zap,
-//   Building2,
-//   Sparkles,
-//   CheckCircle2,
-//   ArrowRight,
-//   Quote,
-// } from "lucide-react";
-
-// /** Minimal UI primitives (no external imports) */
-// const Card = ({ className = "", children }) => (
-//   <div className={`rounded-3xl bg-white ring-1 ring-slate-200 shadow-sm ${className}`}>{children}</div>
-// );
-// const CardHeader = ({ className = "", children }) => <div className={`p-4 pb-0 ${className}`}>{children}</div>;
-// const CardTitle = ({ className = "", children }) => <h3 className={`text-xl font-semibold ${className}`}>{children}</h3>;
-// const CardContent = ({ className = "", children }) => <div className={`p-4 pt-3 ${className}`}>{children}</div>;
-
-// const Button = ({ variant = "solid", className = "", children, ...props }) => {
-//   const base =
-//     "inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 disabled:opacity-50";
-//   const styles =
-//     variant === "outline"
-//       ? "bg-white ring-1 ring-red-300 text-red-700 hover:bg-red-50"
-//       : variant === "ghost"
-//         ? "bg-transparent text-red-700 hover:bg-red-50"
-//         : "bg-red-700 text-white hover:bg-red-800";
-//   return (
-//     <button {...props} className={`${base} ${styles} ${className}`}>
-//       {children}
-//     </button>
-//   );
-// };
-
-// const Badge = ({ children }) => (
-//   <span className="inline-flex items-center gap-1 rounded-full bg-red-50 px-3 py-1 text-xs font-medium text-red-700 ring-1 ring-red-100">
-//     {children}
-//   </span>
-// );
-
-// const cities = ["Chennai", "Bangalore", "Delhi", "Hyderabad", "Mumbai"];
-
-// const services = [
-//   { title: "AC Services", icon: Wrench, short: "End-to-end AC repair, servicing & maintenance across India with quick turnaround and standardized quality.", bullets: ["Evaporator & condenser coil cleaning", "Refrigerant checks & leak fix", "Annual Maintenance Contracts (AMC)"] },
-//   { title: "Commercial AC Services", icon: Building2, short: "Design, install, and maintain high-performance cooling for offices, hotels, hospitals, factories & data centers.", bullets: ["VRF/VRV expertise", "Energy optimization", "Breakdown & preventive care"] },
-//   { title: "RO Plants", icon: Droplets, short: "Reverse Osmosis plants for drinking & process water — design, install, and upkeep for reliable purity.", bullets: ["Membrane descaling", "Biofouling removal", "Flow & purity restoration"] },
-//   { title: "Water Treatment Plants (WTP)", icon: Recycle, short: "Convert contaminated water into usable water for safe consumption & utility applications.", bullets: ["Kitchen, bath & utility reuse", "Quality compliance", "Operations support"] },
-//   { title: "Effluent Treatment Plants (ETP)", icon: Factory, short: "Turnkey ETP projects: design, supply, erection, commissioning, upgrades & maintenance.", bullets: ["Process engineering", "AMC & troubleshooting", "PLC/automation upgrades"] },
-//   { title: "Sewage Treatment Plants (STP)", icon: Recycle, short: "End-to-end STP solutions for residential, commercial & industrial clients with compliance assurance.", bullets: ["Operator training", "Performance optimization", "SCADA integration"] },
-//   { title: "Lift & Escalator", icon: Cog, short: "Installation, modernization & maintenance for elevators and escalators tailored to your building.", bullets: ["High-speed lifts", "Freight elevators", "Safety inspection & AMCs"] },
-//   { title: "Inverter & Generator", icon: Zap, short: "Installation, repair & AMC for inverters and DG sets (5–1000 kVA) with complete electrical integration.", bullets: ["Load testing", "Overhauling & spares", "Emergency breakdown service"] },
-//   { title: "Solar Systems", icon: Sun, short: "End-to-end solar solutions: survey, design, installation, net-metering, and proactive maintenance.", bullets: ["Performance monitoring", "Battery & hybrid options", "Upgrades & expansion"] },
-//   { title: "Chemical Washing", icon: Sparkles, short: "Specialized chemical cleaning for HVAC coils, RO systems & industrial equipment to restore efficiency.", bullets: ["Scale & rust removal", "Bio-growth control", "Energy cost reduction"] },
-// ];
-
-// const features = [
-//   { icon: ShieldCheck, title: "Vetted Experts", text: "Hand-picked partners, trained & insured for safety and reliability." },
-//   { icon: Wrench, title: "Standardized Quality", text: "Documented SOPs & QA checks for consistent service delivery." },
-//   { icon: Phone, title: "Pan-India Support", text: "Quick-response teams across major metros and beyond." },
-// ];
-
-// const steps = [
-//   { title: "Site Survey", text: "On-site audit and requirement capture with a clear scope definition." },
-//   { title: "Proposal & BOQ", text: "Transparent pricing, timelines, and bill of quantities." },
-//   { title: "Execution", text: "Certified technicians, checklists, and QA at every milestone." },
-//   { title: "Handover & AMC", text: "Documentation, training, and proactive maintenance options." },
-// ];
-
-// function classNames(...cls) { return cls.filter(Boolean).join(" "); }
-
-// const SectionHeader = ({ kicker, title, subtitle }) => (
-//   <div className="max-w-2xl">
-//     {kicker && <Badge>{kicker}</Badge>}
-//     <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">{title}</h2>
-//     {subtitle && <p className="mt-2 text-slate-600">{subtitle}</p>}
-//   </div>
-// );
-
-// export default function MarkCareSite() {
-//   const [open, setOpen] = useState(false);
-
-//   return (
-//     <div className="min-h-screen bg-white text-slate-900">
-//       {/* Top Bar */}
-//       <div className="bg-red-700 text-white text-sm">
-//         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
-//           <div className="flex items-center gap-3">
-//             <Phone className="w-4 h-4" />
-//             <a href="tel:+919092844355" className="hover:underline">+91 90928 44355</a>
-//             <span className="opacity-60">|</span>
-//             <a href="tel:+917010421860" className="hover:underline">+91 70104 21860</a>
-//           </div>
-//           <div className="hidden md:flex items-center gap-2">
-//             <MapPin className="w-4 h-4" />
-//             <div className="flex gap-2 flex-wrap">
-//               {cities.map((c) => (
-//                 <span key={c} className="px-2 py-0.5 rounded-full bg-white/10 text-white/90">{c}</span>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Navbar */}
-//       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
-//         <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-//           <a href="#top" className="flex items-center gap-3">
-//             <div className="w-9 h-9 rounded-2xl bg-red-700 text-white grid place-items-center font-bold">M</div>
-//             <div className="leading-tight">
-//               <div className="font-semibold">Mark Care Pvt. Ltd.</div>
-//               <div className="text-xs text-slate-500">Services at Home • Industrial Solutions</div>
-//             </div>
-//           </a>
-//           <div className="hidden md:flex gap-6 text-sm">
-//             {[
-//               ["Services", "#services"],
-//               ["Process", "#process"],
-//               ["About", "#about"],
-//               ["Why Us", "#why-us"],
-//               ["Contact", "#contact"],
-//             ].map(([label, href]) => (
-//               <a key={label} href={href} className="text-slate-600 hover:text-red-700">{label}</a>
-//             ))}
-//           </div>
-//           <div className="hidden md:flex items-center gap-3">
-//             <a href="#contact"><Button>Get Quote</Button></a>
-//           </div>
-//           <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label="Toggle Menu">
-//             {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-//           </button>
-//         </nav>
-//         {open && (
-//           <div className="md:hidden border-t border-slate-200 bg-white">
-//             <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col">
-//               {["Services", "Process", "About", "Why Us", "Contact"].map((label) => (
-//                 <a
-//                   key={label}
-//                   href={`#${label.toLowerCase().replace(/\s/g, "-")}`}
-//                   className="py-2"
-//                   onClick={() => setOpen(false)}
-//                 >
-//                   {label}
-//                 </a>
-//               ))}
-//             </div>
-//           </div>
-//         )}
-//       </header>
-
-//       {/* Hero */}
-//       <section className="relative overflow-hidden">
-//         <div className="absolute inset-0 -z-10 bg-[radial-gradient(80%_80%_at_50%_0%,rgba(185,28,28,0.10),rgba(255,255,255,0))]" />
-//         <div className="max-w-7xl mx-auto px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
-//           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-//             <Badge>Trusted. Standardized. On-time.</Badge>
-//             <h1 className="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-//               High-Quality Services at Home & Industrial Solutions
-//             </h1>
-//             <p className="mt-4 text-lg text-slate-600 max-w-2xl">
-//               Book reliable, standardized services — AC, RO & Water Treatment, Lifts, Solar, Power Systems and more —
-//               delivered by certified professionals at your convenience.
-//             </p>
-//             <div className="mt-6 flex flex-wrap gap-3">
-//               <a href="tel:+919092844355"><Button>Call Now</Button></a>
-//               <a href="#services"><Button variant="outline">Explore Services</Button></a>
-//             </div>
-//             <div className="mt-6 flex items-center gap-4 text-sm text-slate-600">
-//               <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4" /> Trained & Insured</div>
-//               <div className="flex items-center gap-2"><Wrench className="w-4 h-4" /> Standardized SOPs</div>
-//               <div className="flex items-center gap-2"><Phone className="w-4 h-4" /> Quick Support</div>
-//             </div>
-//           </motion.div>
-//           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-//             <div className="relative bg-white rounded-3xl p-6 shadow-xl ring-1 ring-slate-200">
-//               <div className="grid grid-cols-2 gap-4">
-//                 {services.slice(0, 6).map((s, idx) => (
-//                   <div
-//                     key={s.title}
-//                     className={classNames(
-//                       "rounded-2xl p-4 ring-1 ring-slate-200 transition hover:shadow-md",
-//                       idx % 2 === 0 ? "bg-red-50" : "bg-white"
-//                     )}
-//                   >
-//                     <s.icon className="w-6 h-6 text-red-700" />
-//                     <div className="mt-2 font-semibold text-slate-900 text-sm">{s.title}</div>
-//                     <div className="text-xs text-slate-600">{s.short}</div>
-//                   </div>
-//                 ))}
-//               </div>
-//               <div className="mt-4 text-xs text-slate-500">and more…</div>
-//             </div>
-//           </motion.div>
-//         </div>
-//       </section>
-
-//       {/* Stats Bar */}
-//       <section className="border-y border-red-100 bg-red-50/60">
-//         <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-//           {[{ n: "10+", l: "Years Expertise" }, { n: "25+", l: "Cities" }, { n: "50k+", l: "Services Delivered" }, { n: "99%", l: "On-time Rate" }].map((s) => (
-//             <div key={s.l}>
-//               <div className="text-2xl font-bold text-red-700">{s.n}</div>
-//               <div className="text-xs text-slate-600">{s.l}</div>
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* Services */}
-//       <section id="services" className="py-16 lg:py-24 bg-white">
-//         <div className="max-w-7xl mx-auto px-4">
-//           <SectionHeader
-//             kicker="What we do"
-//             title="Our Services"
-//             subtitle="Comprehensive, standardized, and reliable — tailored for homes, businesses, and industry."
-//           />
-//           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//             {services.map((s) => (
-//               <Card key={s.title} className="hover:shadow-md transition">
-//                 <CardHeader>
-//                   <div className="w-12 h-12 rounded-2xl bg-red-100 grid place-items-center">
-//                     <s.icon className="w-6 h-6 text-red-700" />
-//                   </div>
-//                   <CardTitle className="mt-3">{s.title}</CardTitle>
-//                 </CardHeader>
-//                 <CardContent>
-//                   <p className="text-slate-600 text-sm">{s.short}</p>
-//                   <ul className="mt-3 space-y-1 text-sm text-slate-700">
-//                     {s.bullets.map((b, i) => (
-//                       <li key={i} className="flex gap-2 items-start">
-//                         <CheckCircle2 className="mt-0.5 w-4 h-4 text-red-500" />
-//                         <span>{b}</span>
-//                       </li>
-//                     ))}
-//                   </ul>
-//                 </CardContent>
-//               </Card>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Process */}
-//       <section id="process" className="py-16 lg:py-24 bg-red-50/60">
-//         <div className="max-w-7xl mx-auto px-4">
-//           <SectionHeader
-//             kicker="How it works"
-//             title="Simple, transparent process"
-//             subtitle="From first call to final handover — we keep you informed at every step."
-//           />
-//           <div className="mt-10 grid md:grid-cols-4 gap-6">
-//             {steps.map((s, i) => (
-//               <Card key={s.title} className="p-6 text-center">
-//                 <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-white ring-1 ring-red-200 text-red-700 font-semibold">{i + 1}</div>
-//                 <div className="mt-3 font-semibold">{s.title}</div>
-//                 <p className="mt-1 text-sm text-slate-600">{s.text}</p>
-//               </Card>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* About */}
-//       <section id="about" className="py-16 lg:py-24">
-//         <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
-//           <div>
-//             <SectionHeader
-//               kicker="Who we are"
-//               title="About Mark Care"
-//               subtitle="We empower professionals with technology, training and tools to deliver top-tier service every time."
-//             />
-//             <div className="mt-6 grid gap-4">
-//               {features.map((f) => (
-//                 <div key={f.title} className="rounded-2xl p-4 bg-red-50 ring-1 ring-red-100">
-//                   <div className="flex items-start gap-3">
-//                     <f.icon className="w-6 h-6 text-red-700" />
-//                     <div>
-//                       <div className="font-semibold">{f.title}</div>
-//                       <div className="text-sm text-slate-600">{f.text}</div>
-//                     </div>
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//           <div>
-//             <Card className="p-6">
-//               <div className="text-sm uppercase tracking-wide text-slate-500">We operate in</div>
-//               <div className="mt-2 flex flex-wrap gap-2">
-//                 {cities.map((c) => (
-//                   <span key={c} className="px-3 py-1 rounded-full bg-red-100 text-slate-700 text-sm">{c}</span>
-//                 ))}
-//               </div>
-//               <div className="mt-6 rounded-2xl bg-white p-4 ring-1 ring-red-100">
-//                 <div className="font-semibold">Our Vision</div>
-//                 <p className="text-slate-600 text-sm mt-1">
-//                   Empower millions of professionals worldwide to deliver services at home like never experienced before.
-//                 </p>
-//               </div>
-//             </Card>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Testimonials */}
-//       <section className="py-16 lg:py-24 bg-white">
-//         <div className="max-w-7xl mx-auto px-4">
-//           <SectionHeader kicker="Customer love" title="What our clients say" />
-//           <div className="mt-8 grid md:grid-cols-3 gap-6">
-//             {["Quality service and courteous staff.", "Swift installation and neat work.", "AMC made maintenance effortless for us."].map((q, i) => (
-//               <Card key={i} className="p-6">
-//                 <Quote className="w-6 h-6 text-red-600" />
-//                 <p className="mt-3 text-slate-700">{q}</p>
-//                 <div className="mt-4 text-sm font-medium">— Client {i + 1}</div>
-//               </Card>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* CTA */}
-//       <section className="relative py-14">
-//         <div className="absolute inset-0 -z-10 bg-[radial-gradient(60%_80%_at_50%_0%,rgba(185,28,28,0.10),rgba(255,255,255,0))]" />
-//         <div className="max-w-7xl mx-auto px-4">
-//           <Card className="p-6 md:p-10 flex flex-col md:flex-row items-center justify-between">
-//             <div>
-//               <h3 className="text-2xl font-bold">Ready to get started?</h3>
-//               <p className="mt-1 text-slate-600">Get a free site visit or instant quote for your requirement today.</p>
-//             </div>
-//             <div className="mt-4 md:mt-0 flex gap-3">
-//               <a href="#contact"><Button>Get Quote</Button></a>
-//               <a href="tel:+919092844355"><Button variant="outline">Call +91 90928 44355</Button></a>
-//             </div>
-//           </Card>
-//         </div>
-//       </section>
-
-//       {/* Contact */}
-//       <section id="contact" className="py-16 lg:py-24">
-//         <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10">
-//           <div>
-//             <SectionHeader kicker="Contact" title="Get a Free Quote" subtitle="Tell us your requirement and our team will get back within business hours." />
-//             <div className="mt-6 rounded-3xl p-6 bg-red-50 ring-1 ring-red-100">
-//               <div className="text-sm text-slate-700">Call us directly</div>
-//               <div className="mt-2 flex flex-wrap gap-3">
-//                 <a href="tel:+919092844355" className="px-4 py-2 rounded-2xl bg-white ring-1 ring-red-200 hover:ring-red-300">+91 90928 44355</a>
-//                 <a href="tel:+917010421860" className="px-4 py-2 rounded-2xl bg-white ring-1 ring-red-200 hover:ring-red-300">+91 70104 21860</a>
-//               </div>
-//               <div className="mt-4 text-sm">
-//                 <span className="text-slate-600">Website:</span>{" "}
-//                 <a href="https://www.markcare.in" target="_blank" rel="noreferrer" className="text-slate-900 underline">www.markcare.in</a>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Simple contact form (no backend) */}
-//           <Card className="p-6">
-//             <form onSubmit={(e) => e.preventDefault()} className="grid gap-4">
-//               <div>
-//                 <label className="block text-sm font-medium text-slate-700">Name</label>
-//                 <input className="mt-1 w-full rounded-2xl border-slate-300 focus:border-red-400 focus:ring-red-400" placeholder="Your full name" />
-//               </div>
-//               <div className="grid sm:grid-cols-2 gap-4">
-//                 <div>
-//                   <label className="block text-sm font-medium text-slate-700">Phone</label>
-//                   <input className="mt-1 w-full rounded-2xl border-slate-300 focus:border-red-400 focus:ring-red-400" placeholder="+91…" />
-//                 </div>
-//                 <div>
-//                   <label className="block text-sm font-medium text-slate-700">Email</label>
-//                   <input type="email" className="mt-1 w-full rounded-2xl border-slate-300 focus:border-red-400 focus:ring-red-400" placeholder="name@example.com" />
-//                 </div>
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-medium text-slate-700">Service</label>
-//                 <select className="mt-1 w-full rounded-2xl border-slate-300 focus:border-red-400 focus:ring-red-400">
-//                   {services.map((s) => (
-//                     <option key={s.title}>{s.title}</option>
-//                   ))}
-//                 </select>
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-medium text-slate-700">Message</label>
-//                 <textarea rows={4} className="mt-1 w-full rounded-2xl border-slate-300 focus:border-red-400 focus:ring-red-400" placeholder="Tell us about your requirement…" />
-//               </div>
-//               <Button type="submit" className="rounded-2xl">Submit</Button>
-//               <p className="text-xs text-slate-500">By submitting, you agree to be contacted by Mark Care regarding your request.</p>
-//             </form>
-//           </Card>
-//         </div>
-//       </section>
-
-//       {/* Footer */}
-//       <footer className="border-t border-slate-200 bg-white">
-//         <div className="max-w-7xl mx-auto px-4 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-//           <div>
-//             <div className="flex items-center gap-3">
-//               <div className="w-9 h-9 rounded-2xl bg-red-700 text-white grid place-items-center font-bold">M</div>
-//               <div className="font-semibold">Mark Care Pvt. Ltd.</div>
-//             </div>
-//             <p className="mt-3 text-sm text-slate-600">High-quality, standardized & reliable services at your door and for your facilities.</p>
-//           </div>
-//           <div>
-//             <div className="font-semibold">Services</div>
-//             <ul className="mt-3 space-y-2 text-sm text-slate-600">
-//               {services.slice(0, 6).map((s) => (
-//                 <li key={s.title}><a href="#services" className="hover:underline">{s.title}</a></li>
-//               ))}
-//             </ul>
-//           </div>
-//           <div>
-//             <div className="font-semibold">Reach Us</div>
-//             <div className="mt-3 text-sm text-slate-600">Pan-India presence:</div>
-//             <div className="mt-2 flex flex-wrap gap-2">
-//               {cities.map((c) => (
-//                 <span key={c} className="px-2 py-1 rounded-full bg-red-100 text-slate-700 text-xs">{c}</span>
-//               ))}
-//             </div>
-//           </div>
-//           <div>
-//             <div className="font-semibold">Contact</div>
-//             <div className="mt-3 text-sm text-slate-700 space-y-1">
-//               <a href="tel:+919092844355" className="block hover:underline">+91 90928 44355</a>
-//               <a href="tel:+917010421860" className="block hover:underline">+91 70104 21860</a>
-//               <a href="https://www.markcare.in" target="_blank" rel="noreferrer" className="block hover:underline">www.markcare.in</a>
-//             </div>
-//           </div>
-//         </div>
-//         <div className="text-center text-xs text-slate-500 py-6 border-t">© {new Date().getFullYear()} Mark Care Pvt. Ltd. All rights reserved.</div>
-//       </footer>
-
-//       {/* Sticky contact on mobile */}
-//       <div className="fixed bottom-4 right-4 md:hidden">
-//         <a href="#contact"><Button className="shadow-lg"><ArrowRight className="w-4 h-4" /> Get Quote</Button></a>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -593,6 +135,9 @@ const features = [
   { icon: Phone, title: "Pan‑India Support", text: "Quick-response teams across major metros and beyond." },
 ];
 
+const installs = 5000;
+const citiesCount = 15;
+
 function classNames(...cls) {
   return cls.filter(Boolean).join(" ");
 }
@@ -727,7 +272,7 @@ export default function MarkCareSite() {
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-            <div className="relative bg-white rounded-3xl p-6 shadow-xl ring-1 ring-slate-200">
+            <div className="relative bg-white rounded-3xl p-4 md:p-6 shadow-xl ring-1 ring-slate-200">
               <div className="grid grid-cols-2 gap-4">
                 {services.slice(0, 6).map((s, idx) => (
                   <div key={s.title} className={classNames("rounded-2xl p-4 ring-1 ring-slate-200", idx % 2 === 0 ? "bg-red-50" : "bg-white")}>
@@ -751,7 +296,7 @@ export default function MarkCareSite() {
             title="Our Services"
             subtitle="Comprehensive, standardized, and reliable — tailored for homes, businesses, and industry."
           />
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((s) => (
               <Card key={s.title} className="hover:shadow-md transition">
                 <CardHeader>
@@ -851,6 +396,23 @@ export default function MarkCareSite() {
                 <div className="mt-2 text-sm text-slate-600">{item.text}</div>
               </div>
             ))}
+          </div>
+        </div>
+        {/* Simple animated stats */}
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            <div className="rounded-3xl bg-white p-6 text-center ring-1 ring-slate-200">
+              <div className="text-3xl font-bold">{installs}+ </div>
+              <div className="text-sm text-slate-600">Successful Installs</div>
+            </div>
+            <div className="rounded-3xl bg-white p-6 text-center ring-1 ring-slate-200">
+              <div className="text-3xl font-bold">{citiesCount}</div>
+              <div className="text-sm text-slate-600">Cities Covered</div>
+            </div>
+            <div className="rounded-3xl bg-white p-6 text-center ring-1 ring-slate-200">
+              <div className="text-3xl font-bold">24x7</div>
+              <div className="text-sm text-slate-600">Support</div>
+            </div>
           </div>
         </div>
       </section>

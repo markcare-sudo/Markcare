@@ -18,10 +18,10 @@ const Whatsapp = () => {
         className="relative flex items-center"
       >
         {/* Always-visible label */}
-        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm px-3 py-1.5 rounded-full shadow-md whitespace-nowrap">
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-red-400 text-white text-sm px-3 py-1.5 rounded-full shadow-md whitespace-nowrap">
           Chat with us!
           {/* small pointer */}
-          <span className="absolute -right-1 top-1/2 -translate-y-1/2 h-2 w-2 rotate-45 bg-gray-900" />
+          <span className="absolute -right-1 top-1/2 -translate-y-1/2 h-2 w-2 rotate-45 bg-red-400" />
         </span>
 
         {/* Floating WhatsApp button */}
