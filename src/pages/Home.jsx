@@ -223,7 +223,7 @@ export default function MarkCareSite() {
             playsInline
             poster="/assets/Images/Markcare16.jpg"
           >
-            <source src="/assets/Videos/Markcare Banglore Video.mp4" type="video/mp4" />
+            {/* <source src="/assets/Videos/Markcare Banglore Video.mp4" type="video/mp4" /> */}
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-white/0" />
         </div>
