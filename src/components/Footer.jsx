@@ -10,116 +10,47 @@ const LINKS = [
   { label: "Contact us", href: "/#contact" },
 ];
 
-export default function Footer() {
+export default function Footer({services = [], cities = []}) {
   return (
-    <footer className="bg-[#3b8f94] text-white">
-      <div className="mx-auto max-w-7xl px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          {/* Brand + tagline */}
-          <div className="md:col-span-3">
-            <div className="flex items-center gap-3">
-              {/* Replace with your white/on-teal logo */}
-              <img
-                src="/assets/SLR.webp"
-                alt="SLR Infracon Engineers"
-                className="h-20 w-auto"
-              />
-            </div>
-            <p className="mt-4 text-sm text-white/90">Stay updated with us.</p>
-          </div>
-
-          {/* Quick links */}
-          <div className="md:col-span-3">
-            <div className="text-xs font-semibold uppercase tracking-widest text-white/80">
-              Quick Links
-            </div>
-            <ul className="mt-3 space-y-2">
-              {LINKS.map((l) => (
-                <li key={l.label}>
-                  <a
-                    href={l.href}
-                    className="text-sm text-white/90 hover:text-white transition-colors"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact info */}
-          <div className="md:col-span-3">
-            <div className="text-xs font-semibold uppercase tracking-widest text-white/80">
-              Contact Info
-            </div>
-
-            <div className="mt-3 space-y-3 text-sm">
-              <div>
-                <div className="flex items-center gap-2 font-medium text-white/95">
-                  <Phone className="h-4 w-4" /> Call
-                </div>
-                <div className="mt-1 text-white/90">
-                  General enquiries:{" "}
-                  <a href="tel:+919663715363" className="hover:underline">
-                    96637 15363
-                  </a>
-                  ,{" "}
-                  <a href="tel:+918660359064" className="hover:underline">
-                    86603 59064
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-2 font-medium text-white/95">
-                  <Mail className="h-4 w-4" /> Email
-                </div>
-                <a
-                  href="mailto:slrinfraengg@gmail.com"
-                  className="mt-1 inline-block text-white/90 hover:underline"
-                >
-                  slrinfraengg@gmail.com
-                </a>
-              </div>
+    <footer className="border-t border-slate-200 bg-white">
+      <div className="max-w-7xl mx-auto px-4 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <div className="flex items-center gap-3">
+            <img src="/assets/Markcare Logo2.png" alt="Mark Care Logo" className="w-24 rounded-md h-auto" />
+            <div className="leading-tight">
+              <div className="font-bold text-slate-900 text-[18px]">Mark Care Pvt. Ltd.</div>
+              <div className="text-xs text-slate-500 text-[14px] mt-2">Services at Home • Industrial Solutions</div>
             </div>
           </div>
-
-          {/* Locations */}
-          <div className="md:col-span-3">
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/80">
-              <MapPin className="h-4 w-4" /> Location
-            </div>
-
-            <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-              <div>
-                <div className="font-semibold text-white/95">
-                  Bengaluru (Regd. Office)
-                </div>
-                <address className="not-italic text-white/90 leading-6">
-                  124, Ganga Complex, TC Palya Main Road,
-                  <br />
-                  Ramamurthy Nagar, Bengaluru – 560016
-                </address>
-              </div>
-
-              <div>
-                <div className="font-semibold text-white/95">Mumbai (Office)</div>
-                <address className="not-italic text-white/90 leading-6">
-                  124, Ganga Complex, TC Palya Main Road,
-                  <br />
-                  Ramamurthy Nagar, Bengaluru – 560016
-                </address>
-              </div>
-            </div>
-
-            <div className="mt-3 text-sm text-white/90">
-              <span className="font-semibold">Branch office</span>
-              <br />
-              Hubli, Kolhapur, Sirsi.
-            </div>
+          <p className="mt-3 text-sm text-slate-600">High-quality, standardized & reliable services at your door and for your facilities.</p>
+        </div>
+        <div>
+          <div className="font-semibold">Services</div>
+          <ul className="mt-3 space-y-2 text-sm text-slate-600">
+            {services.slice(0, 6).map((s) => (
+              <li key={s.title}><a href="#services" className="hover:underline">{s.title}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <div className="font-semibold">Reach Us</div>
+          <div className="mt-3 text-sm text-slate-600">Pan‑India presence:</div>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {cities.map((c) => (
+              <span key={c} className="px-2 py-1 rounded-full bg-red-100 text-slate-700 text-xs">{c}</span>
+            ))}
+          </div>
+        </div>
+        <div>
+          <div className="font-semibold">Contact</div>
+          <div className="mt-3 text-sm text-slate-700 space-y-1">
+            <a href="tel:+919884927676" className="block hover:underline">+91 98849 27676</a>
+            <a href="tel:+917010421860" className="block hover:underline">+91 70104 21860</a>
+            <a href="https://www.markcare.in" target="_blank" rel="noreferrer" className="block hover:underline">www.markcare.in</a>
           </div>
         </div>
       </div>
+      <div className="text-center text-xs text-slate-500 py-6 border-t">© {new Date().getFullYear()} Mark Care Pvt. Ltd. All rights reserved.</div>
     </footer>
   );
 }
