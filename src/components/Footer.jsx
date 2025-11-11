@@ -1,6 +1,5 @@
 // Footer.jsx
 import React from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
 
 const LINKS = [
   { label: "Home", href: "/" },
