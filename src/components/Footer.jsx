@@ -45,7 +45,7 @@ export default function Footer({services = [], cities = []}) {
           <div className="mt-3 text-sm text-slate-700 space-y-1">
             <a href="tel:+919884927676" className="block hover:underline">+91 98849 27676</a>
             <a href="tel:+917010421860" className="block hover:underline">+91 70104 21860</a>
-            <a href="https://www.markcare.in" target="_blank" rel="noreferrer" className="block hover:underline">www.markcare.in</a>
+            <a href="https://www.markcare.net" target="_blank" rel="noreferrer" className="block hover:underline">www.markcare.net</a>
           </div>
         </div>
       </div>

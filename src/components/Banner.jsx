@@ -25,7 +25,7 @@ const Banner = () => {
                   </span>
                   <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-black drop-shadow">Mark Care — Reliable Home & Industrial Services</h1>
                   <p className="mt-3 text-lg text-black/90 max-w-2xl drop-shadow">
-                      Water Treatment Plants, AC, RO/ETP/STP, Solar, Lifts, Power Systems and more. Pan‑India engineers. On‑time delivery.
+                      Water Treatment Plants(WTP), AC, RO / Effluent Treatment Plants(ETP) / Sewage Treatment Plants(STP), Deasel Generator(DG), Solar, Lifts, Power Systems and more. Pan‑India engineers. On‑time delivery.
                   </p>
                   <div className="mt-6 flex flex-wrap gap-3">
                       <a href="#services"><Button>Explore Services</Button></a>

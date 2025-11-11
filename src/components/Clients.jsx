@@ -22,7 +22,7 @@ const ClientCard = ({ logo, name, subtitle }) => (
 export default function Clients() {
     // duplicate list so translateX:-50% = seamless loop
     const marquee = [...CLIENTS, ...CLIENTS];
-    const speed = 28; // seconds per loop (tweak as you like)
+    const speed = 20; // seconds per loop (tweak as you like)
 
     return (
         <section id="clients" className="py-16 lg:py-24 bg-white border-y border-slate-200">
