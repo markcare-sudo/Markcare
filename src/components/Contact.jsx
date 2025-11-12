@@ -152,7 +152,7 @@ export default function Contact() {
                                 </div>
                             </a>
                             <a
-                                href="https://www.markcare.in"
+                                href="https://www.markcare.net"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 transition hover:shadow-md"
@@ -162,7 +162,7 @@ export default function Contact() {
                                 </span>
                                 <div className="leading-tight">
                                     <div className="text-xs text-slate-500">Website</div>
-                                    <div className="font-medium underline underline-offset-4">www.markcare.in</div>
+                                    <div className="font-medium underline underline-offset-4">www.markcare.net</div>
                                 </div>
                             </a>
                         </div>
@@ -174,7 +174,7 @@ export default function Contact() {
                                 </span>
                                 <div className="leading-tight">
                                     <div className="text-xs text-slate-500">Location</div>
-                                    <div className="font-medium">Chennai & Nearby</div>
+                                    <div className="font-medium">All over India</div>
                                 </div>
                             </div>
                             <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700">
