@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, ShieldCheck, ArrowRight, CheckCircle2, Building2, Globe } from "lucide-react";
 
-// If you already have a shared <Button/> component, replace this with your import and remove this one
-// import Button from "./Button";
+
 const Button = ({ className = "", children, ...props }) => (
     <button
         {...props}
