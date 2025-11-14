@@ -6,6 +6,7 @@ import React from "react";
 import { MapPin, Menu, Phone, X } from "lucide-react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import { LOGOS } from "@/constants/branding";
 
 const Header = ({ open, setOpen, cities = [] }) => {
   return (
@@ -38,7 +39,7 @@ const Header = ({ open, setOpen, cities = [] }) => {
         <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <img
-              src="/assets/Markcare Logo2.png"
+              src={LOGOS.Mark_Care_Logo}
               alt="Mark Care Logo"
               className="w-12 h-auto rounded-md object-cover"
             />
