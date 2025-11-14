@@ -1,3 +1,4 @@
+import { LOGOS } from "@/constants/branding";
 import {
     Phone,
     ShieldCheck,
@@ -12,78 +13,13 @@ import {
     Sparkles,
 } from "lucide-react";
 
-// Put logo images under /public/assets/clients/ (filenames below).
-// export const CLIENTS = [
-//     {
-//         name: "Government Royapettah Hospital",
-//         subtitle: "Chennai, Tamil Nadu",
-//         logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThD1V9WTXAZ3C10-yxlKdwyfzU-uTLGpXGmdwQOVE0KlJ_ruP4FqlFaAI3O5T3Of48U4U&usqp=CAU",
-//         link: "https://tnhealth.tn.gov.in/",
-//         projects: ["Installed and maintain HVAC and water treatment systems to ensure optimal operation and compliance with health standards."],
-//     },
-//     {
-//         name: "Commissioner of Police, Egmore",
-//         subtitle: "Chennai – 600008",
-//         logo: "https://content.jdmagicbox.com/v2/comp/chennai/76/044p3013176/catalogue/police-f-2-egmore-chennai-police-1yyh734-250.jpg",
-//         link: "https://chennaipolice.gov.in/",
-//         projects:[]
-//     },
-//     {
-//         name: "Anna University",
-//         subtitle: "Guindy, Chennai",
-//         logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY-8XzphnbxRbryIwx27bGxIRSHvCOve0eCw&s",
-//         link: "https://www.annauniv.edu/",
-//         projects:[]
-//     },
-//     {
-//         name: "Government Peripheral Hospital",
-//         subtitle: "West Jafferkhanpet, Chennai",
-//         logo: "https://stanleymedicalcollege.ac.in/assets/uploads/logo.png",
-//         link: "https://tnhealth.tn.gov.in/",
-//         projects:[]
-//     },
-//     {
-//         name: "Sathyabama University",
-//         subtitle: "Jeppiaar Nagar, Chennai",
-//         logo: "https://play-lh.googleusercontent.com/MFS-MizCjnkA9lOwhJuccQe6eY9V2vEmSOH9z4CSnxC4cUYD20HgjSw2ZLbDhMuOOcw",
-//         link: "https://www.sathyabama.ac.in/",
-//         projects:[]
-//     },
-//     {
-//         name: "House of Hiranandani, OMR",
-//         subtitle: "Egattur, Chennai",
-//         logo: "https://www.houseofhiranandani.com/data-content/project_location/15.jpg?v=0.01",
-//         link: "https://www.houseofhiranandani.com/",
-//         projects:[]
-//     },
-//     {
-//         name: "ICON Select by Bhagini, Mahadevapura",
-//         subtitle: "Bengaluru, Karnataka",
-//         logo: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxC09nGVHB_xLn7xnfUsTCiEJ2Rjqi_Aah3sBNh4HQ3LDX-gROP0h3WtNoUteIb7Zhg2mOWPajryvMeWh6B2gJyDg9qtqAvm3jKuLcJCupV8oBa8_qfZ3n5WE-JzoiAKKcd9bk=s1360-w1360-h1020-rw",
-//         link: "https://bhagini.com/icon-select-hotel/",
-//         projects:[]
-//     },
-//     {
-//         name: "The Pride Hotel Bangalore",
-//         subtitle: "Richmond Rd, Bengaluru",
-//         logo: "https://assets.simplotel.com/simplotel/image/upload/w_5000,h_2812/x_1163,y_889,w_2500,h_1095,r_0,c_crop,q_80,fl_progressive/w_500,f_auto,c_fit/pride-hotels-group/4_458716bf",
-//         link: "https://www.pridehotel.com/",
-//         projects:[]
-//     },
-//     {
-//         name: "Butterfly Gandhimathi Appliances Ltd",
-//         subtitle: "Pudupakkam, Kelambakkam",
-//         logo: "https://bl-i.thgim.com/public/incoming/sgrcdv/article70245317.ece/alternates/LANDSCAPE_1200/butterfly%20gandhimathi%20appliances.jpg",
-//         link: "https://butterflyindia.com/",
-//         projects:[]
-//     }
-// ];
+
 
 export const CLIENTS = [
     {
         name: "Government Royapettah Hospital",
         subtitle: "Chennai, Tamil Nadu",
-        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThD1V9WTXAZ3C10-yxlKdwyfzU-uTLGpXGmdwQOVE0KlJ_ruP4FqlFaAI3O5T3Of48U4U&usqp=CAU",
+        logo: LOGOS.Govt_Royapettah_Hospital_Logo,
         link: "https://tnhealth.tn.gov.in/",
         projects: [
             {
@@ -111,7 +47,7 @@ export const CLIENTS = [
     {
         name: "Commissioner of Police, Egmore",
         subtitle: "Chennai – 600008",
-        logo: "https://content.jdmagicbox.com/v2/comp/chennai/76/044p3013176/catalogue/police-f-2-egmore-chennai-police-1yyh734-250.jpg",
+        logo: LOGOS.COP_Egmore_Logo,
         link: "https://chennaipolice.gov.in/",
         projects: [
             {
@@ -129,7 +65,7 @@ export const CLIENTS = [
     {
         name: "Anna University",
         subtitle: "Guindy, Chennai",
-        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY-8XzphnbxRbryIwx27bGxIRSHvCOve0eCw&s",
+        logo: LOGOS.Anna_University_Logo,
         link: "https://www.annauniv.edu/",
         projects: [
             {
@@ -147,7 +83,7 @@ export const CLIENTS = [
     {
         name: "Government Peripheral Hospital",
         subtitle: "West Jafferkhanpet, Chennai",
-        logo: "https://stanleymedicalcollege.ac.in/assets/uploads/logo.png",
+        logo: LOGOS.GOVT_Peripheral_Hospital_Logo,
         link: "https://tnhealth.tn.gov.in/",
         projects: [
             {
@@ -165,7 +101,7 @@ export const CLIENTS = [
     {
         name: "Sathyabama University",
         subtitle: "Jeppiaar Nagar, Chennai",
-        logo: "https://play-lh.googleusercontent.com/MFS-MizCjnkA9lOwhJuccQe6eY9V2vEmSOH9z4CSnxC4cUYD20HgjSw2ZLbDhMuOOcw",
+        logo: LOGOS.Satyabhama_University_Logo,
         link: "https://www.sathyabama.ac.in/",
         projects: [
             {
@@ -183,7 +119,7 @@ export const CLIENTS = [
     {
         name: "House of Hiranandani, OMR",
         subtitle: "Egattur, Chennai",
-        logo: "https://www.houseofhiranandani.com/data-content/project_location/15.jpg?v=0.01",
+        logo: LOGOS.House_of_Hiranandani_Logo,
         link: "https://www.houseofhiranandani.com/",
         projects: [
             {
@@ -201,7 +137,7 @@ export const CLIENTS = [
     {
         name: "ICON Select by Bhagini, Mahadevapura",
         subtitle: "Bengaluru, Karnataka",
-        logo: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxC09nGVHB_xLn7xnfUsTCiEJ2Rjqi_Aah3sBNh4HQ3LDX-gROP0h3WtNoUteIb7Zhg2mOWPajryvMeWh6B2gJyDg9qtqAvm3jKuLcJCupV8oBa8_qfZ3n5WE-JzoiAKKcd9bk=s1360-w1360-h1020-rw",
+        logo: LOGOS.Icon_Bhagini_Logo,
         link: "https://bhagini.com/icon-select-hotel/",
         projects: [
             {
@@ -219,7 +155,7 @@ export const CLIENTS = [
     {
         name: "The Pride Hotel Bangalore",
         subtitle: "Richmond Rd, Bengaluru",
-        logo: "https://assets.simplotel.com/simplotel/image/upload/w_5000,h_2812/x_1163,y_889,w_2500,h_1095,r_0,c_crop,q_80,fl_progressive/w_500,f_auto,c_fit/pride-hotels-group/4_458716bf",
+        logo: LOGOS.Pride_Hotel_Logo,
         link: "https://www.pridehotel.com/",
         projects: [
             {
@@ -237,7 +173,7 @@ export const CLIENTS = [
     {
         name: "Butterfly Gandhimathi Appliances Ltd",
         subtitle: "Pudupakkam, Kelambakkam",
-        logo: "https://bl-i.thgim.com/public/incoming/sgrcdv/article70245317.ece/alternates/LANDSCAPE_1200/butterfly%20gandhimathi%20appliances.jpg",
+        logo: LOGOS.Butterfly_Logo,
         link: "https://butterflyindia.com/",
         projects: [
             {
@@ -260,7 +196,7 @@ export const CLIENTS = [
     {
         name: "Bharath Heavy Electricals Ltd",
         subtitle: "Vizagh, Andhra Pradesh",
-        logo: "/assets/ClientsLogos/BHEL_Logo.png",
+        logo: LOGOS.BHEL_Logo,
         link: "https://www.bhel.com/",
         projects: [
             {

@@ -4,6 +4,8 @@ import MainLayout from "../layouts/MainLayout";
 import ErrorBoundary from "../components/ErrorBoundory";
 import NotFound from "@/pages/NotFound";
 import ProjectsSection from "@/pages/Projects";
+import AboutUs from "@/pages/AboutUs";
+import Services from "@/pages/Services";
 
 // Lazy-loaded pages
 const Home = lazy(() => import("../pages/Home"));
@@ -32,6 +34,27 @@ const AppRoutes = () => {
             </ErrorBoundary>
           }
         />
+
+
+        <Route
+          path="/about-us"
+          element={
+            <ErrorBoundary>
+              <AboutUs />
+            </ErrorBoundary>
+          }
+        />
+
+
+        <Route
+          path="/our-services"
+          element={
+            <ErrorBoundary>
+              <Services />
+            </ErrorBoundary>
+          }
+        />
+
 
         <Route
           path="*"

@@ -1,8 +1,15 @@
 export const LOGOS = {
-  logo: import.meta.env.VITE_LOGO,
-  chatbot: import.meta.env.VITE_CHATBOT_LOGO,
-  instagram: import.meta.env.VITE_INSTAGRAM,
-  facebook: import.meta.env.VITE_FACEBOOK,
+  Mark_Care_Logo: import.meta.env.VITE_LOGO,
+  Anna_University_Logo: import.meta.env.VITE_ANNA_UNIVERSITY_LOGO,
+  BHEL_Logo: import.meta.env.VITE_BHEL_LOGO,
+  Butterfly_Logo: import.meta.env.VITE_BUTTERFLY_LOGO,
+  COP_Egmore_Logo: import.meta.env.VITE_COP_EGMORE_LOGO,
+  GOVT_Peripheral_Hospital_Logo: import.meta.env.VITE_GOVT_PERIPHERAL_HOSPITAL_LOGO,
+  House_of_Hiranandani_Logo: import.meta.env.VITE_HOUSE_OF_HIRANANDANI_LOGO,
+  Icon_Bhagini_Logo: import.meta.env.VITE_ICON_BHAGINI_LOGO,
+  Satyabhama_University_Logo: import.meta.env.VITE_SATYABHAMA_UNIVERSITY_LOGO,
+  Govt_Royapettah_Hospital_Logo: import.meta.env.VITE_GOVT_ROYPETTAH_HOSPITAL_LOGO,
+  Pride_Hotel_Logo: import.meta.env.VITE_THE_PRIDE_HOTEL_LOGO,
 };
 
 export const BANNER_IMAGES = {
