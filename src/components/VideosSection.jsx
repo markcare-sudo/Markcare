@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function InAction() {
     return (
@@ -96,12 +97,12 @@ export default function InAction() {
                     transition={{ delay: 0.2, duration: 0.6 }}
                     className="mt-14 text-center"
                 >
-                    <a
-                        href="/projects"
+                    <Link
+                        to="/projects"
                         className="inline-flex items-center gap-2 px-10 py-3 rounded-full bg-slate-900 text-white font-medium text-sm shadow-md hover:shadow-xl hover:bg-slate-800 transition-all duration-300"
                     >
                         🎥 View All Projects
-                    </a>
+                    </Link>
                     <p className="mt-3 text-sm text-slate-500">
                         — Explore our real-world projects and client success stories
                     </p>
