@@ -3,6 +3,7 @@ import { lazy } from "react";
 import MainLayout from "../layouts/MainLayout";
 import ErrorBoundary from "../components/ErrorBoundory";
 import NotFound from "@/pages/NotFound";
+import ProjectsSection from "@/pages/Projects";
 
 // Lazy-loaded pages
 const Home = lazy(() => import("../pages/Home"));
@@ -22,6 +23,16 @@ const AppRoutes = () => {
               </ErrorBoundary>
           }
         />
+
+        <Route
+          path="/projects"
+          element={
+            <ErrorBoundary>
+              <ProjectsSection />
+            </ErrorBoundary>
+          }
+        />
+
         <Route
           path="*"
           element={
