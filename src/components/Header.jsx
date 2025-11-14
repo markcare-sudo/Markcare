@@ -33,7 +33,7 @@ const Header = ({ open, setOpen, cities }) => {
             <img src="/assets/Markcare Logo2.png" alt="Mark Care Logo" className="w-12 h-auto rounded-md" />
             <div className="leading-tight">
               <div className="font-semibold text-slate-900">Mark Care Pvt. Ltd.</div>
-              <div className="text-xs text-slate-500">Services at Home • Industrial Solutions</div>
+              <div className="text-xs text-slate-500">Services at Residential • Industrial Solutions</div>
             </div>
           </Link>
           <div className="hidden md:flex gap-6 text-sm">

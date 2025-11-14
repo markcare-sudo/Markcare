@@ -257,6 +257,24 @@ export const CLIENTS = [
             },
         ],
     },
+    {
+        name: "Bharath Heavy Electricals Ltd",
+        subtitle: "Vizagh, Andhra Pradesh",
+        logo: "/assets/ClientsLogos/BHEL_Logo.png",
+        link: "https://www.bhel.com/",
+        projects: [
+            {
+                heading: "STP Plant Setup",
+                description: "Installed 1 Million Liters per Day(MLD) Sewage Treatment Plant for residential complex wastewater management.",
+                count: "1 MLD",
+            },
+            {
+                heading: "Operation & Maintenance",
+                description: "End-to-end operation and maintenance of STP for water recycling and discharge control.",
+                count: "Ongoing O&M",
+            },
+        ],
+    },
 ];
 
 
