@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { cities } from '@/utils/data';
+import Header from '@/components/Header';
 
 /**
  * Services.jsx (fixed)
@@ -232,9 +234,14 @@ const SERVICES = [
 ];
 
 export default function Services({ services = SERVICES }) {
+    const [open, setOpen] = React.useState(false);
+
     return (
-        <section id="services" className="bg-white text-gray-900">
-            <div className="mx-auto max-w-7xl px-4 py-16 sm:py-24">
+        <section id="services" className="min-h-screen bg-white text-slate-900">
+            {/* Navbar */}
+            <Header open={open} setOpen={setOpen} cities={cities} />
+
+            <div className="mx-auto max-w-7xl px-4 py-10">
                 <div className="mx-auto max-w-3xl text-center">
                     <span className="inline-flex items-center gap-2 rounded-full bg-[#FFF0F0] px-3 py-1 text-xs font-medium text-[#E53935]">Our Services</span>
                     <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">Comprehensive technical services — trusted, certified, and compliant</h2>

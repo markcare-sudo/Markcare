@@ -7,6 +7,7 @@ import ProjectsSection from "@/pages/Projects";
 import AboutUs from "@/pages/AboutUs";
 import Services from "@/pages/Services";
 import Contact from "@/pages/ContactUs";
+import LiftBrochure from "@/pages/LiftSection";
 
 // Lazy-loaded pages
 const Home = lazy(() => import("../pages/Home"));
@@ -62,6 +63,15 @@ const AppRoutes = () => {
           element={
             <ErrorBoundary>
               <Contact />
+            </ErrorBoundary>
+          }
+        />
+
+        <Route
+          path="/lift-maintenance"
+          element={
+            <ErrorBoundary>
+              <LiftBrochure />
             </ErrorBoundary>
           }
         />

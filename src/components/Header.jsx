@@ -59,7 +59,6 @@ const Header = ({ open, setOpen, cities = [] }) => {
               <Link to="/projects" className="text-slate-600 hover:text-slate-900">Our Projects</Link>
               <Link to="/contact-us" className="text-slate-600 hover:text-slate-900">Contact Us</Link>
             </div>
-
           </div>
 
           {/* CTA */}
