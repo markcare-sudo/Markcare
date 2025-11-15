@@ -53,22 +53,20 @@ const Header = ({ open, setOpen, cities = [] }) => {
           <div className="hidden md:flex items-center gap-6 text-sm">
             {/* section anchors */}
             <div className="flex gap-6 items-center">
+              <Link to="/" className="text-slate-600 hover:text-slate-900">Home</Link>
+              <Link to="/about-us" className="text-slate-600 hover:text-slate-900">About Us</Link>
               <Link to="/our-services" className="text-slate-600 hover:text-slate-900">Services</Link>
-              <Link to="/about-us" className="text-slate-600 hover:text-slate-900">About</Link>
-              <a href="#contact" className="text-slate-600 hover:text-slate-900">Contact</a>
+              <Link to="/projects" className="text-slate-600 hover:text-slate-900">Our Projects</Link>
+              <Link to="/contact-us" className="text-slate-600 hover:text-slate-900">Contact Us</Link>
             </div>
 
-            {/* internal routes */}
-            <div className="flex items-center gap-4">
-              <Link to="/projects" className="text-slate-600 hover:text-slate-900">Our Projects</Link>
-            </div>
           </div>
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="#contact" aria-label="Get Quote">
+            <Link to="/contact-us" aria-label="Get Quote">
               <Button className="rounded-2xl">Get Quote</Button>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile toggle */}
@@ -88,7 +86,7 @@ const Header = ({ open, setOpen, cities = [] }) => {
             <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col">
               <Link to="/our-services" className="py-2" onClick={() => setOpen(false)}>Services</Link>
               <Link to="/about-us" className="py-2" onClick={() => setOpen(false)}>About Us</Link>
-              <a href="#contact" className="py-2" onClick={() => setOpen(false)}>Contact</a>
+              <Link to="/contact-us" className="py-2" onClick={() => setOpen(false)}>Contact Us</Link>
               <Link to="/projects" className="py-2" onClick={() => setOpen(false)}>Our Projects</Link>
               <Link to="/clients" className="py-2" onClick={() => setOpen(false)}>Our Clients</Link>
             </div>

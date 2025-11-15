@@ -127,9 +127,10 @@ export default function ProjectsSection({ clients = CLIENTS }) {
     };
 
     return (
-        <section id="projects" className="min-h-screen bg-white text-slate-900 ">
+        <section id="projects" className="min-h-screen bg-white text-slate-900">
             {/* Navbar */}
             <Header open={open} setOpen={setOpen} cities={cities} />
+
             <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10">
                 
                 <div className="mx-auto max-w-3xl text-center">

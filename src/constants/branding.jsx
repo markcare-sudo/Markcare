@@ -12,6 +12,14 @@ export const LOGOS = {
   Pride_Hotel_Logo: import.meta.env.VITE_THE_PRIDE_HOTEL_LOGO,
 };
 
+export const VIDEO_CLIPS = {
+  Bottle: import.meta.env.VITE_BOTTLE_VIDEO || "",
+  Bottle1: import.meta.env.VITE_BOTTLE_VIDEO1 || "",
+  Ro_Plant: import.meta.env.VITE_RO_PLANT_VIDEO || "",
+  Ro_Plant1: import.meta.env.VITE_RO_PLANT_VIDEO1 || "",
+  Ro_Plant2: import.meta.env.VITE_RO_PLANT_VIDEO2 || "",
+};
+
 export const BANNER_IMAGES = {
   Markcare1: import.meta.env.VITE_INTERIOR || "",
   Manufacturer: import.meta.env.VITE_MANUFACTURER || "",

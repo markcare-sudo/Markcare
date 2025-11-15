@@ -12,14 +12,6 @@ import {
 import { cities } from "@/utils/data";
 import Header from "@/components/Header";
 
-/**
- * AboutUs.jsx
- * - Responsive, production-ready About / Company profile section for MarkCare
- * - Tailwind CSS + Framer Motion for animations
- * - Light background, red brand accents (use #E53935)
- * - Includes: hero, mission, services grid, stats, media gallery (images + video), team CTA
- * - Replace placeholder image/video paths with your actual assets in /public or import them.
- */
 
 export default function AboutUs() {
     const [open, setOpen] = React.useState(false);
@@ -245,12 +237,3 @@ export default function AboutUs() {
         </section>
     );
 }
-
-/*
-Notes / Integration
-- Replace image/video src paths in /public/assets or import at top: import heroImg from '../assets/about-hero.jpg'
-- Add animations: framer-motion is used for simple fade-up effects
-- Tailwind classes assume Tailwind configured. Use `@tailwindcss/aspect-ratio` plugin or adjust aspect styles.
-- For responsive video modal, consider a lightbox component and a video player (e.g., react-player)
-- Accessibility: add alt text for images and aria-labels for interactive elements
-*/

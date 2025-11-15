@@ -50,9 +50,6 @@ export default function MarkCareSite() {
       {/* Why Us */}
       <WhyUs installs={installs} citiesCount={citiesCount} />
 
-      {/* Contact */}
-      <Contact />
-
       {/* Gallery / Media */}
       <WorkShowcase />
 

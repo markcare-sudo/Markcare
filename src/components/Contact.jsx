@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, ShieldCheck, ArrowRight, CheckCircle2, Building2, Globe } from "lucide-react";
+import { cities } from "@/utils/data";
+import Header from "./Header";
 
 
 const Button = ({ className = "", children, ...props }) => (
@@ -15,6 +17,7 @@ const Button = ({ className = "", children, ...props }) => (
 const cx = (...cls) => cls.filter(Boolean).join(" ");
 
 export default function Contact() {
+    const [open, setOpen] = useState(false);
     const [form, setForm] = useState({ name: "", phone: "", email: "", service: "AC Services", message: "" });
     const [status, setStatus] = useState({ done: false, error: "", loading: false });
 
@@ -56,6 +59,8 @@ export default function Contact() {
     return (
         <section id="contact" className="relative py-20 lg:py-28">
             {/* Soft gradient background + subtle grid */}
+            {/* Navbar */}
+            <Header open={open} setOpen={setOpen} cities={cities} />
             <div className="absolute inset-0 -z-10 bg-gradient-to-b from-slate-50 via-white to-slate-50" />
             <div className="pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(500px_circle_at_20%_20%,#000,transparent)]">
                 <svg aria-hidden className="h-full w-full opacity-[0.07]" xmlns="http://www.w3.org/2000/svg">
