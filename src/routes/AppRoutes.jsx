@@ -68,7 +68,7 @@ const AppRoutes = () => {
         />
 
         <Route
-          path="/lift-maintenance"
+          path="/our-services/lift-service"
           element={
             <ErrorBoundary>
               <LiftBrochure />

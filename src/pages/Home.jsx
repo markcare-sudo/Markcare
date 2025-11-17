@@ -1,21 +1,18 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Button from "@/components/Button";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Contact from "@/components/Contact";
 import WhyUs from "@/components/WhyUs";
 import AboutUs from "@/components/AboutUs";
 import Clients from "@/components/Clients";
 import Services from "@/components/Services";
-import Hero from "@/components/Hero";
-import Banner from "@/components/Banner";
+// import Hero from "@/components/Hero";
+// import Banner from "@/components/Banner";
 import { cities, features, services } from "@/utils/data";
 import WorkShowcase from "@/components/WorkShowcase";
 import InAction from "@/components/VideosSection";
-/** Minimal UI primitives (no external imports) */
-
-
+import Banner from "@/components/LandingPageComponents/Banner";
+import Hero from "@/components/LandingPageComponents/Hero";
+import QualityServices from "@/components/LandingPageComponents/QualityServices";
 
 
 const installs = 5000;
@@ -30,7 +27,6 @@ export default function MarkCareSite() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900">
-    {/* <div className="min-h-screen bg-white text-slate-900"> */}
 
       {/* Navbar */}
       <Header open={open} setOpen={setOpen} cities={cities}/>
@@ -42,7 +38,7 @@ export default function MarkCareSite() {
       <Hero services={services} classNames={classNames} />
 
       {/* Services */}
-      <Services services={services} />
+      <QualityServices services={services} />
 
       {/* About */}
       <AboutUs features={features} cities={cities} />
@@ -59,8 +55,6 @@ export default function MarkCareSite() {
       {/* Clients strip */}
       <Clients />
 
-      {/* Footer */}
-      {/* <Footer services={services} cities={cities} /> */}
     </div>
   );
 }

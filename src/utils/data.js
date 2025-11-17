@@ -299,3 +299,11 @@ export const features = [
     { icon: Wrench, title: "Standardized Quality", text: "Documented SOPs & QA checks for consistent service delivery." },
     { icon: Phone, title: "Pan‑India Support", text: "Quick-response teams across major metros and beyond." },
 ];
+
+
+export const siteMeta = {
+    name: "MarkCare",
+    tagline: "Industrial Services • AC • RO • STP • ETP • Solar • Inverter",
+    phone: "+91 9092844355",
+    cities: ["Chennai", "Bangalore", "Delhi", "Hyderabad", "Mumbai"]
+};
